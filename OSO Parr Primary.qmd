@@ -1,0 +1,120 @@
+---
+title: Parr and Spawner Abundances of Sockeye Salmon (Oncorynchus nerka) from Osoyoos Lake (British Columbia, Canada).
+author:
+  - name: Scott A. Akenhead
+    email: scott@s4s.com
+    affiliations: 
+        - id: some-tech
+          name: Pacific Biological Station
+          department: Fisheries and Oceans Canada
+          address: 3190 Hammond Bay Road
+          city:  Nanaimo
+          state: British Columbia, Canada
+          postal-code: V9T 6N7
+    attributes:
+        corresponding: true
+    note: This is the first author footnote.
+  - name: Braden Judsen
+    email: braden.judsen@dfo-mpo.gc.ca
+    affiliations:
+        - id: another-u
+          name: Pacific Biological Station
+          department: Fisheries and Oceans Canada
+          address: 3190 Hammond Bay Road
+          city:  Nanaimo
+          state: British Columbia, Canada
+          postal-code: V9T 6N7
+    note: |
+     Another author footnote, this is a very long footnote and it should be a really long footnote. But this footnote is not yet sufficiently long enough to make two lines of footnote text.
+abstract: |
+  We analysed 106 (?) surveys, from the 27 years 1996–2022, of parr, the lacustrine life stage of Sockeye Salmon, in small, warm, and eutrophic Osoyoos Lake in the Columbia River watershed. All the surveys were aggregated for a regression to determine annual abundance and the pattern of mortality rate through this life stage. That regression provided abundance estimates for each year at standardized dates representing beginning and end of that life stage. Attention to (a) the relative precision of each survey as regression weights, and (b) factors known to affect parr survival (flows, a pollution event, parr size) improved the precision of estimates. The parents of these parr were surveyed repeatedly each year as spawners in the Okanagan River immediately upstream of Osoyoos Lake.  A spawners to early parr regression similarly benefited by including river flows as a factor known to affect egg, alevin, and migrating fry survival. Given that spawners predict early parr, thus inform parr abundance, we merged these two models to determine how shared information might benefit both. ... and then what? Don't stop there!  What the hell?
+keywords: 
+  - Sockeye Salmon
+  - Osoyoos Lake
+  - Oncorynchus nerka
+date: 2022-10-30
+bibliography: bibliography.bib
+format:
+  elsevier-pdf:
+    keep-tex: true
+    journal:
+      name: Ecological Informatics
+      formatting: preprint
+      model: 3p
+      cite-style: authoryear
+    include-in-header: 
+      text: |
+        \newpageafter{author}
+---
+
+### Doc Prep Notes
+
+<https://www.elsevier.com/authors/policies-and-guidelines/latex-instructions> styles
+
+Here are [@hyatt2015] example citations [@fryer2018; @fryer2011] from Zotero shared library: [Okanagan Sockeye 2023.](https://www.zotero.org/groups/4787789/okanagan_sockeye_2023/library)
+
+Here is an equation the ref is @eq-lorenz and that resulted in a numbered equation. $$ 
+  f_{X}(x) = \left(\frac{\alpha}{\beta}\right)
+  \left(\frac{x}{\beta}\right)^{\alpha-1}
+  e^{-\left(\frac{x}{\beta}\right)^{\alpha}}; 
+  \alpha,\beta,x > 0 .
+$$ {#eq-lorenz}
+
+Inline equations work as well: $\sum_{i = 2}^\infty\{\alpha_i^\beta\}$
+
+This is \@fig-meaningless from an R chunk. Does each fig and table need separate chunk? The journal format move pictures to end but not figures and tables from R chunks?
+
+```{r}
+#| label: fig-meaningless
+#| fig-cap: Samples from a bivariate normal distribution.
+#| fig-width: 5
+#| fig-height: 5
+#| fig-align: center
+#| out-width: 50%
+#| echo: false
+par(tcl=0.5)
+plot( rnorm(100,10:15,1), rnorm(100,10:15,1),  xlab="Bottom", ylab="Side")
+```
+
+### Pictures
+
+Just use **`Insert`** in Quatro Visual, then adjust size after. This picture is referenced from `Attributes >> ID #fig-paths`. Journal format automatically moves pictures to end. (!)
+
+![Life Paths of Chilko sockeye. Each cohort is observed nine times over 6 years. Percentages are the mean values from 1960--2008.](example_image.png){#fig-paths width="308"}
+
+### Tables  from R
+
+Caption and label (for reference) in chunk, here is @tbl-simple as an example.
+
+```{r}
+#| label: tbl-simple
+#| tbl-cap: Caption centered above table
+#| echo: true
+knitr::kable(head(mtcars)[,1:4])
+```
+
+# Introduction
+
+asdf
+
+# Methods
+
+asdf
+
+# Results
+
+asdf
+
+# Discussion
+
+asdf
+
+# Acknowledgements
+
+A data sharing agreement ... Okanagan Basin Working Group ... led by Kayilyn Alex (Okanagan First Nations) made these analyses possible. Data for these analyses were collected and shared from the following list of agencies and people, with apologies for inadvertent omissions: Dr. Kim Hyatt, ... This paper benefited from an excellent peer review process and, as a draft, by thorough critique from Dr. Athena Ogden (DFO).
+
+# Tables
+
+asdf
+
+# References {.unnumbered}
